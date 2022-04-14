@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>破釜沉舟论文编辑器v0.1</title>
+  <title>破釜沉舟编辑器</title>
   <link href="./static/normalize.css" rel="stylesheet">
   <link href="./static/style.css" rel="stylesheet">
   <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js">
@@ -131,14 +131,15 @@
       }
     })
 
-    editor.onChange = function () {
-      if (typeof (inst) == "undefined" || inst == null) {
-        inst = setTimeout(function () { alert("Hello") }, 3000);
-      }else{
-        clearTimeout(inst)
-        inst = setTimeout(function () { alert("Hello") }, 3000);
-      }
-    }
+    // 定时器
+    // editor.onChange = function () {
+    //   if (typeof (inst) == "undefined" || inst == null) {
+    //     inst = setTimeout(function () { alert("Hello") }, 3000);
+    //   }else{
+    //     clearTimeout(inst)
+    //     inst = setTimeout(function () { alert("Hello") }, 3000);
+    //   }
+    // }
   </script>
 
 </body>
