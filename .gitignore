@@ -3,3 +3,4 @@ nginx.conf
 /web/dist/
 /.idea/
 node_modules
+dist
