@@ -2,10 +2,11 @@ import "@wangeditor/editor/dist/css/style.css";
 import { createEditor, createToolbar } from "@wangeditor/editor";
 
 
+var inst;
 
 const editorConfig = {
-  placeholder: '停止输入内容超过 10 秒钟会自动清空所有内容……',
-      scroll: false, // 禁止编辑器滚动
+  placeholder: '停止输入内容超过 10 秒钟将会自动清空所有文本……',
+  scroll: false, // 禁止编辑器滚动
   MENU_CONF: {
     uploadImage: {
       fieldName: 'your-fileName',
@@ -14,8 +15,25 @@ const editorConfig = {
   },
   onChange(editor) {
     cleanHandler();
+    if(inst != undefined || inst != null){
+      clearInterval(inst);
+    }
+    inst = countdownHandler();
   }
 }
+
+
+function countdownHandler() {
+  var count = 100;
+  function countdown() {
+    count--;
+    var progressBar = document.getElementById("progressBar");
+    progressBar.style.width = count + "%";
+
+  }
+  return setInterval(countdown, 100);
+}
+
 
 // 创建编辑器
 const editor = createEditor({
