@@ -36,8 +36,6 @@
 
   - ……
 
-- ……
-
 ## 运行截图
 
 ![home.png](assets/674f9faca90680cab351fc5076157cdc0fbaead1.png)
